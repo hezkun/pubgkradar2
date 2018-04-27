@@ -17,8 +17,9 @@ html { overflow-y: hidden; }
   /* background-color: #00695C; 	*/
   overflow-x: hidden; /* Disable horizontal scroll */
   background:white;
-  background-color:rgba(255, 255, 255, 0.7);
+  background-color:rgba(255, 255, 255, 0);
   display:none;
+  color:	#FFFF00
 }
 
 /* Style page content */
