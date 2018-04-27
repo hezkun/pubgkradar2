@@ -382,7 +382,7 @@ const playerStyleFunc = function (feature) {
       rotation: this.get('_rotation') || 0, // 0 - 6.28,
     }),
     text: new ol.style.Text({
-      font: '12px Calibri,sans-serif',
+      font: '0px Calibri,sans-serif',
       textAlign: 'center',
       fill: new ol.style.Fill({ color: 'rgba(255,255,255,1)' }),
       text: this.get('_label') || '' ,
