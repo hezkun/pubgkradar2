@@ -384,7 +384,7 @@ const playerStyleFunc = function (feature) {
     text: new ol.style.Text({
       font: '0px Calibri,sans-serif',
       textAlign: 'center',
-      fill: new ol.style.Fill({ color: 'rgba(255,255,255,1)' }),
+      fill: new ol.style.Fill({ color: 'rgba(255,255,0,1)' }),
       text: this.get('_label') || '' ,
       offsetY: 15
     })
@@ -464,7 +464,7 @@ const safeCircle = new ol.Feature({
   geometry: new ol.geom.Circle([-1, -1], 100)
 })
 safeCircle.setId('safe')
-safeCircle.set('_color', 'rgba(0,0,255,0.9)')
+safeCircle.set('_color', 'rgba(255,0,0,0.9)')
 safeCircle.setStyle(zoneStyleFunc)
 gridSource.addFeature(safeCircle)
 
@@ -472,7 +472,7 @@ const poisonCircle = new ol.Feature({
   geometry: new ol.geom.Circle([-1, -1], 0)
 })
 poisonCircle.setId('poison')
-poisonCircle.set('_color', 'rgba(255,255,255,0.9)')
+poisonCircle.set('_color', 'rgba(0,255,50,0.9)')
 poisonCircle.setStyle(zoneStyleFunc)
 gridSource.addFeature(poisonCircle)
 
@@ -494,15 +494,15 @@ const itemStyleFunc = function (feature) {
       fill: new ol.style.Fill({
         color: 'rgba(0,255,0,1)'
       }),
-      stroke: new ol.style.Stroke({color: 'rgba(0,0,255,0.8)', width: 1.5 })
+      stroke: new ol.style.Stroke({color: 'rgba(0,0,255,0.5)', width: 1.2 })
     }),
     text: new ol.style.Text({
-      font: 'bold 14px Calibri,sans-serif',
+      font: 'bold 12px Calibri,sans-serif',
       textAlign: 'center',
       fill: new ol.style.Fill({ color: 'rgba(239,108,0,1)' }),
       text: this.get('_label') || '' ,
       offsetY: 12,
-      stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1)', width: 2.5 })
+      stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1)', width: 1 })
     })
   })
   return [style]
@@ -522,7 +522,7 @@ const mePoint = new ol.Feature({
   geometry: new ol.geom.Point([appData.me[0], appData.me[1]])
 })
 mePoint.setId('me')
-mePoint.set('_radius', 6)
+mePoint.set('_radius', 5)
 const meStyleFunc = function (feature) {
   const meIconStyle = new ol.style.Style({
     image: new ol.style.Circle({
@@ -541,7 +541,7 @@ const meStyleFunc = function (feature) {
   if (lineGeo)
   result.push(new ol.style.Style({
     geometry: this.get('_lineGeo'),
-    stroke: new ol.style.Stroke({ color: 'rgba(64,255,64,1)', width: 2.2 })
+    stroke: new ol.style.Stroke({ color: 'rgba(64,255,64,1)', width: 1.7 })
   }))
   return result
 }
