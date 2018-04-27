@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "请记住连接信息"
 read -p "内网ip： " ip
-cp /root/winnerpubg/restart.sh /root/restart.sh
+cp /root/winnerpubg2/restart.sh /root/restart.sh
 chmod +x restart.sh
 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
